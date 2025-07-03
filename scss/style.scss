@@ -1,0 +1,11 @@
+@import "bootsrtap/bootstrap";
+@import "_custom-mixin";
+@import "_custom-variables.scss";
+@import "_button";
+@import "_spacing";
+@import "_typography";
+@import "_animation";
+
+.btn-group {
+    @include flex-prop($gap: 10px, $wrap: nowrap);
+}

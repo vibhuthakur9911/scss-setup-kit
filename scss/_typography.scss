@@ -1,0 +1,82 @@
+html {
+    scroll-behavior: smooth;
+    @include responsive-font-size(font-html);
+}
+
+body {
+    font-family: $font-para;
+    font-weight: normal;
+    @include responsive-font-size(body-font-medium);
+    font-style: normal;
+    line-height: normal;
+}
+
+h1 {
+    font-family: $font-heading;
+    @include responsive-font-size(font-size-h1);
+    font-weight: 700;
+    line-height: normal;
+}
+
+h2 {
+    font-family: $font-heading;
+    @include responsive-font-size(font-size-h2);
+    font-weight: 700;
+    line-height: 120%;
+}
+
+h3 {
+    font-family: $font-heading;
+    @include responsive-font-size(font-size-h3);
+    font-weight: 600;
+    line-height: normal;
+}
+
+h4 {
+    font-family: $font-heading;
+    @include responsive-font-size(font-size-h4);
+    font-weight: 600;
+    line-height: normal;
+}
+
+h5 {
+    color: #001e1f;
+    font-family: $font-heading;
+    @include responsive-font-size(font-size-h5);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h6 {
+    font-family: $font-para;
+    @include responsive-font-size(font-size-h6);
+    font-weight: 700;
+    line-height: normal;
+}
+
+p {
+    @include responsive-font-size(body-font-medium);
+    line-height: 150%;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s;
+    color: inherit;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

@@ -1,0 +1,65 @@
+// Responsive Mixin
+// @mixin respond($breakpoint) {
+//     @if map-has-key($breakpoints, $breakpoint) {
+//         @media (min-width: map-get($breakpoints, $breakpoint)) {
+//             @content;
+//         }
+//     } @else {
+//         @warn "Breakpoint not found: #{$breakpoint}";
+//     }
+// }
+
+// for font size
+@mixin responsive-font-size($key) {
+    @if map-has-key($font-sizes, $key) {
+        $font-sizes-map: map-get($font-sizes, $key);
+
+        // Always set base font-size using xs value
+        font-size: map-get($font-sizes-map, xs);
+
+        // Apply responsive font-sizes
+        @each $bp-name, $bp-value in $breakpoint {
+            @if map-has-key($font-sizes-map, $bp-name) and $bp-name != xs {
+                @media (min-width: $bp-value) {
+                    font-size: map-get($font-sizes-map, $bp-name);
+                }
+            }
+        }
+    } @else {
+        @warn "Font size key `#{$key}` not found in font-sizes map.";
+    }
+}
+
+@mixin flex-prop($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: unset) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    gap: $gap;
+}
+
+// Button Transition
+@mixin button-transition($duration: 0.3s) {
+    transition: all $duration ease-in-out;
+}
+
+// Background Cover
+@mixin bg-cover($url) {
+    background: url($url) no-repeat center center / cover;
+}
+// Hover Effect
+@mixin hover-effect($hover-color: darken($bg-black, 10%)) {
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: $hover-color;
+    }
+}
+
+// Grid Layout
+@mixin grid($columns: 2, $gap: 2rem) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
+}

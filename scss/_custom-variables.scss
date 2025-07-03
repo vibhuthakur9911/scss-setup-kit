@@ -1,0 +1,165 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap");
+/* font-family: "Oswald", sans-serif; */
+/* font-family: "Inter", sans-serif; */
+/* font-family: "Open Sans", sans-serif; */
+
+$font-para: "Open Sans", sans-serif;
+$font-heading: "Oswald", sans-serif;
+
+$breakpoint: (
+    xs: 480px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+
+$font-sizes: (
+    font-html: (
+        xs: 30%,
+        sm: 41%,
+        md: 44%,
+        lg: 49%,
+        xl: 62.5%
+    ),
+
+    font-size-h1: (
+        xs: 5.4rem,
+        sm: 5.6rem,
+        lg: 5.1rem,
+        xl: 6rem
+    ),
+
+    font-size-h2: (
+        xs: 4.4rem,
+        sm: 4.6rem,
+        lg: 5.1rem,
+        xl: 5.5rem
+    ),
+
+    font-size-h3: (
+        xs: 4rem,
+        sm: 4.2rem,
+        xl: 4rem
+    ),
+
+    font-size-h4: (
+        xs: 3.2rem,
+        sm: 3.4rem,
+        xl: 3.2rem
+    ),
+
+    font-size-h5: (
+        xs: 3rem,
+        sm: 3.2rem,
+        xl: 2.8rem
+    ),
+
+    font-size-h6: (
+        xs: 2.8rem,
+        sm: 2.8rem,
+        xl: 2.4rem
+    ),
+
+    font-size-btn: (
+        xs: 2.4rem,
+        sm: 2.1rem,
+        md: 2.1rem,
+        lg: 2.1rem,
+        xl: 2rem
+    ),
+
+    body-font-medium: (
+        xs: 1.96rem,
+        sm: 1.75rem,
+        md: 1.75rem,
+        lg: 1.75rem,
+        xl: 1.8rem
+    ),
+
+    body-font-small: (
+        xs: 1.96rem,
+        sm: 1.75rem,
+        md: 1.75rem,
+        lg: 1.75rem,
+        xl: 1.6rem
+    ),
+
+    body-font-xs: (
+        xs: 1.75rem,
+        sm: 1.6rem,
+        md: 1.55rem,
+        lg: 1.55rem,
+        xl: 1.4rem
+    )
+);
+
+$theme-color: #e95630;
+$bg-secondry: #142544;
+$bg-black: #000;
+$bg-dark: rgb(33 37 41);
+$bg-grey:
+    linear-gradient(0deg, #f1f3f3 0%, #f1f3f3 100%),
+    url(<path-to-image>) lightgray 50% / cover no-repeat;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.theme-bg {
+    background-color: $theme-color;
+}
+
+.theme-color {
+    color: $theme-color;
+}
+
+.text-red {
+    color: #f00;
+}
+
+.tagline {
+    @include responsive-font-size(body-font-small);
+    color: #f48f2c;
+    margin: 0;
+}
+
+.bg-grey {
+    background:
+        linear-gradient(0deg, #f1f3f3 0%, #f1f3f3 100%),
+        url(<path-to-image>) lightgray 50% / cover no-repeat;
+}
+
+.bg-dark {
+    background: $bg-dark;
+}
+.bg-black {
+    background: $bg-black;
+}
+.bg-black,
+.bg-dark {
+    color: #fff;
+}
+
+.title-w-50 {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title-w-70 {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inner-banner-small {
+    padding: 10rem 0;
+}
+
+.banner-img-pattern {
+    @include bg-cover("");
+}

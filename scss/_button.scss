@@ -1,0 +1,55 @@
+.default-btn {
+    @include responsive-font-size(font-size-btn);
+    border: 1px solid $theme-color;
+    color: $theme-color;
+    padding: 1.5rem 3.2rem;
+    border-radius: 5px;
+    display: inline-block;
+    @include button-transition;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+    &:hover {
+        background-color: $bg-black;
+        color: #fff;
+    }
+
+    &.theme-btn {
+        background: $theme-color;
+        color: #fff;
+        border: 1px solid $theme-color;
+        &:hover {
+            background: $bg-black;
+            border: 1px solid $bg-black;
+        }
+    }
+    &.secondory-btn {
+        background: $bg-secondry;
+        color: #fff;
+        border: 1px solid $bg-secondry;
+    }
+
+    &.transparent-btn {
+        background-color: transparent;
+        color: #fff;
+        border: 1px solid #fff;
+
+        &:after {
+            position: absolute;
+            content: "";
+            top: 0;
+            height: 100%;
+            right: 0;
+            width: 0;
+            background: $theme-color;
+            transition: 0.5s;
+            z-index: -1;
+        }
+        &:hover {
+            &:after {
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+}
