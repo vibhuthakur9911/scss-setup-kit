@@ -6,22 +6,24 @@ A reusable and customizable SCSS project setup with Bootstrap integration, custo
 
 ## 📁 Folder Structure
 
+```bash
+
 scss-setup-kit/
-│
-├── css/ # Compiled CSS files (ignored in Git)
-│
-├── scss/ # Main SCSS folder
-│ ├── bootstrap/ # Bootstrap source SCSS files (optional override)
-│ ├── _animation.scss # Predefined animation keyframes
-│ ├── _button.scss # Button styling
-│ ├── _custom-mixin.scss# Reusable SCSS mixins
-│ ├── _custom-variables.scss # Custom variables for color, spacing, etc.
-│ ├── _spacing.scss # Utility spacing classes
-│ ├── _typography.scss # Fonts, headings, text styles
-│ └── style.scss # Main SCSS entry file that imports all above
-│
-├── index.html # Demo HTML file to test compiled CSS
-└── .gitignore # Git ignored files like compiled CSS
+├── css/                     
+├── scss/                    
+│   ├── bootstrap/           
+│   ├── _animation.scss      
+│   ├── _button.scss         
+│   ├── _custom-mixin.scss   
+│   ├── _custom-variables.scss 
+│   ├── _spacing.scss        
+│   ├── _typography.scss     
+│   └── style.scss           
+├── index.html               
+└── .gitignore               
+
+```
+
 
 ```bash
 
