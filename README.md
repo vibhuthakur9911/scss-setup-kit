@@ -1,4 +1,4 @@
-# 💻 SCSS Starter Kit by Vaibhav
+* [ ] 💻 SCSS Starter Kit
 
 A reusable and customizable SCSS project setup with Bootstrap integration, custom mixins, variables, animations, spacing utilities, and typography. This boilerplate is designed to speed up your frontend development process with a well-organized folder structure and clean modular code.
 
@@ -23,10 +23,10 @@ scss-setup-kit/
 ├── index.html # Demo HTML file to test compiled CSS
 └── .gitignore # Git ignored files like compiled CSS
 
-
 ```bash
 
 sass scss/style.scss css/style.css --watch
 
 ```
+
 This command compiles the SCSS files in the `scss` folder and outputs the compiled CSS in
